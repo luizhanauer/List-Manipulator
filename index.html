@@ -23,8 +23,23 @@
 		</div>
 		<h3 id="outputcount"></h3>
 		<hr>
-		<a class="btn btn-primary" onclick="sort();"data-toggle="tooltip" title="ascending order"><i class="fas fa-sort-numeric-down fa-2x"></i></a>
-		<a class="btn btn-primary" onclick="reverse();"data-toggle="tooltip" title="descending order"><i class="fas fa-sort-numeric-up fa-2x"></i></a>
+		<a class="btn btn-primary" onclick="sort();"data-toggle="tooltip" title="descending order"><i class="fas fa-sort-amount-down fa-2x"></i></a>
+		<a class="btn btn-primary" onclick="reverse();"data-toggle="tooltip" title="ascending order"><i class="fas fa-sort-amount-up-alt fa-2x"></i></a>
+		<hr>
+		<div class="form-group">
+			<label for="prefix">Prefix</label>
+			<input type="email" class="form-control" id="prefix">
+		</div>
+		<div class="form-group">
+			<label for="suffix">Suffix</label>
+			<input type="email" class="form-control" id="suffix">
+		</div>
+		<a class="btn btn-dark" onclick="ps_fix();">Go</a>
+		<hr>
+		<div class="form-group">
+			<h2 for="output">Changed</h2>
+			<textarea class="form-control" id="changed" rows="8" readonly="false"></textarea>
+		</div>
 	</div>
 
 
@@ -53,13 +68,13 @@
 			document.getElementById("output").value = tostring;
 			document.getElementById("inputcount").innerHTML = arraylist.length+' items';
 			document.getElementById("outputcount").innerHTML = listunique.length+' items';
-      
+
 		}
 
 		function sort() {
 			let list = document.getElementById("output").value;
 			let arraylist = list.split(/\s/);
-			arraylist = arraylist.sort();
+			arraylist = arraylist.sort((a,b)=>b-a);
 			let tostring = arraylist.join("\n");
 			document.getElementById("output").value = tostring;
 
@@ -67,10 +82,25 @@
 		function reverse() {
 			let list = document.getElementById("output").value;
 			let arraylist = list.split(/\s/);
+			arraylist = arraylist.sort((a,b)=>b-a);
 			arraylist = arraylist.reverse();
 			let tostring = arraylist.join("\n");
 			document.getElementById("output").value = tostring;
 			
+		}
+		function ps_fix() {
+			let prefix = document.getElementById("prefix").value;
+			let suffix = document.getElementById("suffix").value;
+			let list = document.getElementById("output").value;
+			let arraylist = list.split(/\s/);
+			let arraylistoutput = [];
+			for (var i = 0; i < arraylist.length; i++) {
+				arraylistoutput.push(prefix+arraylist[i]+suffix);
+			}
+			let tostring = arraylistoutput.join("\n");
+			document.getElementById("changed").value = tostring;
+
+
 		}
 
 	</script>
