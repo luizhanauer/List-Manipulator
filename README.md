@@ -12,7 +12,9 @@ Como instalar
     
     bashCopy code
     
-    `git clone https://github.com/seu-usuario/manipulador-de-listas.git`
+    ```
+    git clone https://github.com/seu-usuario/manipulador-de-listas.git
+    ```
     
 2.  Abra o arquivo `index.html` em seu navegador de preferência.
     
