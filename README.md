@@ -10,8 +10,6 @@ Como instalar
 
 1.  Faça o download ou clone este repositório em seu computador:
     
-    bashCopy code
-    
     ```
     git clone https://github.com/seu-usuario/manipulador-de-listas.git
     ```
