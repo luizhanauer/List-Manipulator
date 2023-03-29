@@ -3,7 +3,7 @@ Manipulador de Listas
 
 O Manipulador de Listas é uma aplicação web simples que permite ao usuário remover itens repetidos de uma lista de palavras ou adicionar um prefixo ou sufixo a cada palavra da lista.
 
-Vale lembrar que o Gerador de Senhas também pode ser acessado diretamente no endereço https://luizhanauer.github.io/removeequals/. Essa é uma ótima opção para quem prefere acessar a ferramenta online, sem precisar baixar nenhum arquivo.
+Vale lembrar que o Gerador de Senhas também pode ser acessado diretamente no endereço https://luizhanauer.github.io/List-Manipulator. Essa é uma ótima opção para quem prefere acessar a ferramenta online, sem precisar baixar nenhum arquivo.
 
 Como instalar
 -------------
